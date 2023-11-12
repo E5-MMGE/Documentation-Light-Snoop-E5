@@ -13,13 +13,13 @@
 
 ## Sommaire
 
-* [Pour Commencer](#getting-started)
-  * [Prérequis](#prerequisites)
-  * [Installation](#installation)
-* [Roadmap](#roadmap)
-* [Contribuer](#contributing)
-* [License](#license)
-* [Autheurs](#authors)
+* [Pour Commencer](#Pour-Commencer)
+  * [Prérequis](#Prérequis)
+  * [Installation](#Installation)
+* [Roadmap](#Roadmap)
+* [Contribuer](#Contribuer)
+* [License](#License)
+* [Autheurs](#Autheurs)
 
 ## Pour Commencer
 
