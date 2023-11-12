@@ -11,22 +11,21 @@
 
 
 
-## Table Of Contents
+## Sommaire
 
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
+* [Pour Commencer](#getting-started)
+  * [Prérequis](#prerequisites)
   * [Installation](#installation)
 * [Roadmap](#roadmap)
-* [Contributing](#contributing)
+* [Contribuer](#contributing)
 * [License](#license)
-* [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
+* [Autheurs](#authors)
 
-## Getting Started
+## Pour Commencer
 
 Pour faire/refaire l'infra Light Snoop :
 
-### Prerequisites
+### Prérequis
 
 * ISO de Proxmox
 ```sh
@@ -52,7 +51,7 @@ wget https://enterprise.proxmox.com/iso/proxmox-ve_8.0-2.iso
 * Configuration de la borne WiFi
 * Routage interne vers la borne WiFi
 
-## Contributing
+## Contribuer
 
 * Si vous avez des suggestions pour ajouter ou supprimer des projets, n'hésitez pas à [Issues](https://github.com/E5-MMGE/Documentation-Light-Snoop-E5/issues) pour en discuter, ou créez directement une demande d'extraction après avoir édité le fichier *README.md* avec les changements nécessaires.
 * Créer un PR individuel pour chaque suggestion.
@@ -61,7 +60,7 @@ wget https://enterprise.proxmox.com/iso/proxmox-ve_8.0-2.iso
 
 Distribué sous la license WTFPL. Voir [WTFPL](http://www.wtfpl.net/about/) pour plus d'information.
 
-## Authors
+## Autheurs
 
 * [Nikki Devil](https://github.com/Nikki-Devil/)
 * [Matis Games 35](https://github.com/MatisGames35)
