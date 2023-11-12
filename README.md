@@ -15,7 +15,7 @@
 
 * [Pour Commencer](#Pour-Commencer)
   * [Prérequis](#Prérequis)
-  * [Installation](#Installation)
+  * [Installation](#nstallation)
 * [Roadmap](#Roadmap)
 * [Contribuer](#Contribuer)
 * [License](#License)
@@ -27,10 +27,11 @@ Pour faire/refaire l'infra Light Snoop :
 
 ### Prérequis
 
-* ISO de Proxmox
-```sh
-wget https://enterprise.proxmox.com/iso/proxmox-ve_8.0-2.iso
-```
+* [Rufus](https://github.com/pbatard/rufus/releases/latest/), [Balena Etcher](https://github.com/balena-io/etcher/releases/latest/) ou tout autre logiciel du genre
+* [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) ou autre logiciel d'interaction console
+* [OpenVPN](https://openvpn.net/community-downloads/)
+* Clé/Stockage USB de 4Go minimum
+* ISO de [Proxmox VE](https://proxmox.com/en/downloads/proxmox-virtual-environment/iso)
 * Un PfSense externe connecté en WAN
 * Deux serveurs de 16 coeurs CPU et 22Go de RAM minimum
 * Borne WiFi (Ici Cisco Aironet AIR-PWR-B)
@@ -39,10 +40,16 @@ wget https://enterprise.proxmox.com/iso/proxmox-ve_8.0-2.iso
 
 ### Installation
 
+* [PfSense Externe]()
 * [Proxmox VE]()
-* [PfSense]()
-* [Windows Server 2022 Standard]()
-* [Debian 11]()
+* [PfSense Interne 1]()
+* [PfSense Interne 2]()
+* [Windows Server 2022 Standard 1]()
+* [Windows Server 2022 Standard 2]()
+* [Debian 11 1]()
+* [Debian 11 2]()
+* [Switch]()
+* [Borne WiFi]()
 
 ## Roadmap
 
