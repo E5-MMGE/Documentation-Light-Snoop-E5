@@ -1,21 +1,69 @@
-# Conf
+<br/>
+<p align="center">
+  <h3 align="center">Documentation infra Light Snoop</h3>
 
-Switch :
+  <p align="center">
+    Fait dans le cadre du projet de l'épreuve E5 du BTS SIO 2022-2024
+    <br/>
+    <br/>
+  </p>
+</p>
+
+
+
+## Table Of Contents
+
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Authors](#authors)
+* [Acknowledgements](#acknowledgements)
+
+## Getting Started
+
+Pour faire/refaire l'infra Light Snoop :
+
+### Prerequisites
+
+* ISO de Proxmox
+```sh
+wget https://enterprise.proxmox.com/iso/proxmox-ve_8.0-2.iso
 ```
-en
-conf t
+* Un PfSense externe connecté en WAN
+* Deux serveurs de 16 coeurs CPU et 22Go de RAM minimum
+* Borne WiFi (Ici Cisco Aironet AIR-PWR-B)
+* Switch pour redistribuer du PfSense aux serveurs et des serveurs au Wifi
+* Optionnel : ISO de PfSense, Windows Server 2022 et Debian 11
 
-int range g0/1
-switch access vlan 100
+### Installation
 
-int g0/2
-switch access vlan 200
+* [Proxmox VE]()
+* [PfSense]()
+* [Windows Server 2022 Standard]()
+* [Debian 11]()
 
-int g0/20
-switch mode trunk
+## Roadmap
 
-end
-write memory
-```
+* Ajout de routage OSPF entre les deux PfSense interne
+* Flashage de la borne WiFi (Cisco Aironet AIR-PWR-B)
+* Configuration de la borne WiFi
+* Routage interne vers la borne WiFi
 
-# Doc
+## Contributing
+
+* Si vous avez des suggestions pour ajouter ou supprimer des projets, n'hésitez pas à [Issues](https://github.com/E5-MMGE/Documentation-Light-Snoop-E5/issues) pour en discuter, ou créez directement une demande d'extraction après avoir édité le fichier *README.md* avec les changements nécessaires.
+* Créer un PR individuel pour chaque suggestion.
+
+## License
+
+Distribué sous la license WTFPL. Voir [WTFPL](http://www.wtfpl.net/about/) pour plus d'information.
+
+## Authors
+
+* [Nikki Devil](https://github.com/Nikki-Devil/)
+* [Matis Games 35](https://github.com/MatisGames35)
+* [Kriooxx](https://github.com/kriooxx)
+* [Nghyy](https://github.com/nghyy)
