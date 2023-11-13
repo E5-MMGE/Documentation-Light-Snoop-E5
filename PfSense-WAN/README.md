@@ -42,75 +42,75 @@ Pour faire/refaire l'infra Light Snoop :
 
 #### Formatage de la clé USB
 
-1. Télécharger l'ISO de PfSense (ici 2.7.0, AMD64, DVD Image)
+1. Téléchargez l'ISO de PfSense (ici 2.7.0, AMD64, DVD Image)
 ![PfSense Website](/PfSense-WAN/Img/Pf_Rufus-1.png?raw=true "PfSense Website")
-2. Télécharger Rufus
-* Image du Git de Rufus
-3. Brancher la clé USB sur le PC
+2. Téléchargez Rufus
+![Rufus Website](/PfSense-WAN/Img/Pf_Rufus-2.png?raw=true "Rufus Website")
+3. Branchez la clé USB sur le PC
 4. Ouvrir Rufus
-* Image de Rufus
-6. Sélectionner la clé USB
-* Image de Rufus avec la clé USB
-5. Sélectionner l'ISO de PfSense
-* Image de Rufus avec l'ISO erreur
-* Image de Rufus avec l'ISO sélectionné
-7. Lancer le formatage
-* Image de Rufus avec le formatage
-* Image de Rufus avec le formatage terminé
+![Rufus](/PfSense-WAN/Img/Pf_Rufus-3.png?raw=true "Rufus")
+6. Sélectionnez la clé USB
+![Rufus USB](/PfSense-WAN/Img/Pf_Rufus-4.png?raw=true "Rufus USB")
+5. Sélectionnez l'ISO de PfSense, continuez si vous avez une erreur "ISOHybrid"
+![Rufus ISO error](/PfSense-WAN/Img/Pf_Rufus-5.png?raw=true "Rufus ISO error")
+![Rufus ISO](/PfSense-WAN/Img/Pf_Rufus-6.png?raw=true "Rufus ISO")
+7. Lancez le formatage
+![Rufus Format](/PfSense-WAN/Img/Pf_Rufus-7.png?raw=true "Rufus Format")
+![Rufus End](/PfSense-WAN/Img/Pf_Rufus-8.png?raw=true "Rufus End")
 
 #### Système
 
-1. Brancher la clé USB sur le serveur
-2. Démarrer le serveur
-3. Appuyer sur F11 pour accéder au boot menu
-4. Sélectionner la clé USB
-* Image de l'écran de boot
+1. Branchez la clé USB sur le serveur
+2. Démarrez le serveur
+3. Appuyez sur F11 pour accéder au boot menu
+4. Sélectionnez la clé USB
+![BIOS USB](/PfSense-WAN/Img/Pf_USB.png?raw=true "BIOS USB")
 5. Faites entrer pour démarrer l'installation
-* Image de l'écran d'installation 1
-6. Sélectionner "Install"
-* Image de l'écran d'installation 2
-7. Sélectionner le clavier "Auto (ZFS)"
-* Image de l'écran d'installation 3
+![PfSense Install Start](/PfSense-WAN/Img/Pf_Install-1.png?raw=true "PfSense Install Start")
+6. Sélectionnez "Install"
+![PfSense Install](/PfSense-WAN/Img/Pf_Install-2.png?raw=true "PfSense Install")
+7. Sélectionnez le clavier "Auto (ZFS)"
+![PfSense Install ZFS](/PfSense-WAN/Img/Pf_Install-3.png?raw=true "PfSense Install ZFS")
 8. Faites entrer pour valider la configuration
-* Image de l'écran d'installation 4
-9. Sélectionner "Stripe"
-* Image de l'écran d'installation 5
-10. Sélectionner votre disque (touche espace pour sélectionner), ici "da0"
-* Image de l'écran d'installation 6
-11. Sélectionner "Yes"
-* Image de l'écran d'installation 7
+![PfSense Install Conf](/PfSense-WAN/Img/Pf_Install-4.png?raw=true "PfSense Install Conf")
+9. Sélectionnez "Stripe"
+![PfSense Install Stripe](/PfSense-WAN/Img/Pf_Install-5.png?raw=true "PfSense Install Stripe")
+10. Sélectionnez votre disque (touche espace pour sélectionner), ici "da0"
+![PfSense Install Disk](/PfSense-WAN/Img/Pf_Install-6.png?raw=true "PfSense Install Disk")
+11. Sélectionnez "Yes"
+![PfSense Install Format](/PfSense-WAN/Img/Pf_Install-7.png?raw=true "PfSense Install Format")
 12. L'installation commence, sélectionnez "Reboot" une fois terminé
-* Image de l'écran d'installation 8
-* Image de l'écran d'installation 9
+![PfSense Installing](/PfSense-WAN/Img/Pf_Install-8.png?raw=true "PfSense Installing")
+![PfSense Install Reboot](/PfSense-WAN/Img/Pf_Install-9.png?raw=true "PfSense Install Reboot")
 
 #### Configuration Interne
 
 1. Laissez le serveur démarrer
 2. Appuyez sur 2 pour configurer l'interface WAN
-* Image de l'écran de configuration 1
+![PfSense Conf IntWAN](/PfSense-WAN/Img/Pf_Conf-1.png?raw=true "PfSense Conf IntWAN")
 3. Sélectionnez l'interface WAN avec le numéro correspondant (ici 1)
-* Image de l'écran de configuration 2
+![PfSense Conf WAN](/PfSense-WAN/Img/Pf_Conf-2.png?raw=true "PfSense Conf WAN")
 4. Faites "y" pour configurer l'interface WAN en DHCP pour l'IpV4
 5. Faites de même pour l'IpV6
-* Image de l'écran de configuration 3
+![PfSense Conf WAN DHCP](/PfSense-WAN/Img/Pf_Conf-3.png?raw=true "PfSense Conf WAN DHCP")
 6. Si demandé, refusez l'http pour le webconfigurator
-* Image de l'écran de configuration 4
+![PfSense Conf WebConf](/PfSense-WAN/Img/Pf_Conf-4.png?raw=true "PfSense Conf WebConf")
 7. Faites "Entrer" pour valider la configuration
 8. Appuyez sur 2 pour configurer l'interface LAN
 9. Sélectionnez l'interface LAN avec le numéro correspondant (ici 2)
-* Image de l'écran de configuration 5
+![PfSense Conf LAN](/PfSense-WAN/Img/Pf_Conf-5.png?raw=true "PfSense Conf LAN")
 10. Faites "n" pour configurer l'interface LAN en statique pour l'IpV4
 11. L'adresse LAN est 192.168.1.1
 12. Le masque est 24
 13. Faites "Entrer" pour la Gateway car c'est le serveur PfSense lui-même
-* Image de l'écran de configuration 6
+![PfSense Conf LAN Static](/PfSense-WAN/Img/Pf_Conf-6.png?raw=true "PfSense Conf LAN Static")
 15. Faites "y" pour configurer l'interface LAN en DHCP pour l'IpV6, la raison étant que nous n'en avons pas besoin dans cette infra
 16. Faites "y" pour configurer le serveur DHCP pour l'IpV4
-* Image de l'écran de configuration 7
+![PfSense Conf LAN DHCP4](/PfSense-WAN/Img/Pf_Conf-7.png?raw=true "PfSense Conf LAN DHCP4")
 17. L'adresse de départ est 192.168.1.2
 18. L'adresse de fin est 192.168.1.5
 19. Faites "Entrer" pour valider la configuration
-* Image de l'écran de configuration 8
+![PfSense Conf LAN Range](/PfSense-WAN/Img/Pf_Conf-6.png?raw=true "PfSense Conf LAN Range")
 
 #### Configuration GUI
 
@@ -118,38 +118,38 @@ Pour faire/refaire l'infra Light Snoop :
 2. Ouvrez un navigateur
 3. Allez sur l'adresse https://192.168.1.1/
 4. Acceptez et continuez malgré le certificat invalide
-* Image du GUI 1
+![PfSense Gui Certif](/PfSense-WAN/Img/Pf_Gui-1.png?raw=true "PfSense Gui Certif")
 4. Connectez-vous avec les identifiants par défaut (admin/pfsense)
-* Image du GUI 2
+![PfSense Gui Connect](/PfSense-WAN/Img/Pf_Gui-2.png?raw=true "PfSense Gui Connect")
 5. Faites "Next"
-* Image du GUI 3
+![PfSense Gui Startup2](/PfSense-WAN/Img/Pf_Gui-3.png?raw=true "PfSense Gui Startup2")
 6. Faites "Next"
-* Image du GUI 4
+![PfSense Gui Startup3](/PfSense-WAN/Img/Pf_Gui-4.png?raw=true "PfSense Gui Startup3")
 7. Remplissez les informations :
   * "Pf-WAN" pour le hostname
   * "1.1.1.1" pour le DNS principal
   * "8.8.8.8" pour le DNS secondaire
 8. Faites "Next"
-* Image du GUI 5
+![PfSense Gui Host](/PfSense-WAN/Img/Pf_Gui-5.png?raw=true "PfSense Gui Host")
 9. Séléctionnez votre fuseau horaire (ici Europe/Paris)
 10. Faites "Next"
-* Image du GUI 6
+![PfSense Gui Date/Time](/PfSense-WAN/Img/Pf_Gui-6.png?raw=true "PfSense Gui Date/Time")
 11. Faites "Next", aucune modification n'est nécessaire pour le WAN
-* Image du GUI 7
-* Image du GUI 8
+![PfSense Gui WAN1](/PfSense-WAN/Img/Pf_Gui-7.png?raw=true "PfSense Gui WAN1")
+![PfSense Gui WAN2](/PfSense-WAN/Img/Pf_Gui-8.png?raw=true "PfSense Gui WAN2")
 12. Faites "Next", aucune modification n'est nécessaire pour le LAN
-* Image du GUI 9
+![PfSense Gui LAN](/PfSense-WAN/Img/Pf_Gui-9.png?raw=true "PfSense Gui LAN")
 13. Changez le mot de passe de l'admin (ici "admin")
 14. Faites "Next"
-* Image du GUI 10
+![PfSense Gui Passwd](/PfSense-WAN/Img/Pf_Gui-10.png?raw=true "PfSense Gui Passwd")
 15. Faites "Reload" et attendez que le serveur redémarre
-* Image du GUI 11
+![PfSense Gui Reload](/PfSense-WAN/Img/Pf_Gui-11.png?raw=true "PfSense Gui Reload")
 16. Une fois la page rechargée, faites "Check for updates" si l'ISO utilisée est ancienne, sinon faites "Finish"
-* Image du GUI 12
+![PfSense Gui Update](/PfSense-WAN/Img/Pf_Gui-12.png?raw=true "PfSense Gui Update")
 17. Acceptez les conditions d'utilisation
-* Image du GUI 13
+![PfSense Gui Notice](/PfSense-WAN/Img/Pf_Gui-13.png?raw=true "PfSense Gui Notice")
 18. Faites "Close"
-* Image du GUI 14
+![PfSense Gui End](/PfSense-WAN/Img/Pf_Gui-14.png?raw=true "PfSense Gui End")
 
 #### Configuration Interfaces
 
