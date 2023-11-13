@@ -39,7 +39,7 @@ Pour faire/refaire l'infra Light Snoop :
 #### Formatage de la clé USB
 
 1. Téléchargez l'ISO de Proxmox VE (ici 8.0-2)
-![PfSense Website](/Proxmox-1/Img/Pr1_Rufus-1.png?raw=true "PfSense Website")
+![Proxmox VE Website](/Proxmox-1/Img/Pr1_Rufus-1.png?raw=true "PfSense Website")
 2. Téléchargez Rufus
 ![Rufus Website](/Proxmox-1/Img/Pr1_Rufus-2.png?raw=true "Rufus Website")
 3. Branchez la clé USB sur le PC
@@ -70,10 +70,10 @@ Pour faire/refaire l'infra Light Snoop :
 
 ### Installation Suivante
 
-* [Proxmox VE 2](/Proxmox-2/README.md)
 * [PfSense 1](/Proxmox-1/PfSense-1/README.md)
 * [Windows Server 2022 Standard 1](/Proxmox-1/Windows-1/README.md)
 * [Debian 11 1](/Proxmox-1/Debian-1/README.md)
+* [Proxmox VE 2](/Proxmox-2/README.md)
 
 ## Roadmap
 
