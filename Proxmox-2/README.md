@@ -39,21 +39,21 @@ Pour faire/refaire l'infra Light Snoop :
 #### Formatage de la clé USB
 
 1. Téléchargez l'ISO de Proxmox VE (ici 8.0-2)
-![PfSense Website](/Proxmox-2/Img/Pr_Rufus-1.png?raw=true "PfSense Website")
+![PfSense Website](/Proxmox-2/Img/Pr2_Rufus-1.png?raw=true "PfSense Website")
 2. Téléchargez Rufus
-![Rufus Website](/Proxmox-2/Img/Pr_Rufus-2.png?raw=true "Rufus Website")
+![Rufus Website](/Proxmox-2/Img/Pr2_Rufus-2.png?raw=true "Rufus Website")
 3. Branchez la clé USB sur le PC
 4. Ouvrir Rufus
-![Rufus](/Proxmox-2/Img/Pr_Rufus-3.png?raw=true "Rufus")
+![Rufus](/Proxmox-2/Img/Pr2_Rufus-3.png?raw=true "Rufus")
 6. Sélectionnez la clé USB
-![Rufus USB](/Proxmox-2/Img/Pr_Rufus-4.png?raw=true "Rufus USB")
+![Rufus USB](/Proxmox-2/Img/Pr2_Rufus-4.png?raw=true "Rufus USB")
 5. Sélectionnez l'ISO de Proxmox VE, continuez si vous avez une erreur "ISOHybrid"
-![Rufus ISO error](/Proxmox-2/Img/Pr_Rufus-5.png?raw=true "Rufus ISO error")
-![Rufus ISO](/Proxmox-2/Img/Pr_Rufus-6.png?raw=true "Rufus ISO")
+![Rufus ISO error](/Proxmox-2/Img/Pr2_Rufus-5.png?raw=true "Rufus ISO error")
+![Rufus ISO](/Proxmox-2/Img/Pr2_Rufus-6.png?raw=true "Rufus ISO")
 7. Lancez le formatage
 - NEED 2 IMAGES
-![Rufus Format](/Proxmox-2/Img/Pr_Rufus-7.png?raw=true "Rufus Format")
-![Rufus End](/Proxmox-2/Img/Pr_Rufus-8.png?raw=true "Rufus End")
+![Rufus Format](/Proxmox-2/Img/Pr2_Rufus-7.png?raw=true "Rufus Format")
+![Rufus End](/Proxmox-2/Img/Pr2_Rufus-8.png?raw=true "Rufus End")
 
 #### Système
 
@@ -61,7 +61,7 @@ Pour faire/refaire l'infra Light Snoop :
 2. Démarrez le serveur
 3. Appuyez sur F11 pour accéder au boot menu
 4. Sélectionnez la clé USB
-![BIOS USB](/Proxmox-2/Img/Pr_USB.png?raw=true "BIOS USB")
+![BIOS USB](/Proxmox-2/Img/Pr2_USB.png?raw=true "BIOS USB")
 5. -
 
 #### Téléchargement ISOs
