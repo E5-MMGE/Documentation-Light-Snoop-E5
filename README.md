@@ -40,16 +40,17 @@ Pour faire/refaire l'infra Light Snoop :
 
 ### Installation
 
-* [PfSense Externe](/PfSense%20Externe/README.md)
-* [Proxmox VE]()
-* [PfSense Interne 1]()
-* [PfSense Interne 2]()
-* [Windows Server 2022 Standard 1]()
-* [Windows Server 2022 Standard 2]()
-* [Debian 11 1]()
-* [Debian 11 2]()
-* [Switch]()
-* [Borne WiFi]()
+* [PfSense Externe](/PfSense-WAN/README.md)
+* [Proxmox VE 1](/Proxmox-1/README.md)
+* [Proxmox VE 2](/Proxmox-2/README.md)
+* [PfSense Interne 1](/Proxmox-1/PfSense-1/README.md)
+* [PfSense Interne 2](/Proxmox-2/PfSense-2/README.md)
+* [Windows Server 2022 Standard 1](/Proxmox-1/Windows-1/README.md)
+* [Windows Server 2022 Standard 2](/Proxmox-2/Windows-2/README.md)
+* [Debian 11 1](/Proxmox-1/Debian-1/README.md)
+* [Debian 11 2](/Proxmox-2/Debian-2/README.md)
+* [Switch](/Switch/README.md)
+* [Borne WiFi](/Borne-WiFi/README.md)
 
 ## Roadmap
 
