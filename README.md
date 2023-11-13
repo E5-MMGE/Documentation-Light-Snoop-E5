@@ -15,7 +15,7 @@
 
 * [Pour Commencer](#Pour-Commencer)
   * [Prérequis](#Prérequis)
-  * [Installation](#nstallation)
+  * [Installation](#Installation)
 * [Roadmap](#Roadmap)
 * [Contribuer](#Contribuer)
 * [License](#License)
@@ -31,16 +31,18 @@ Pour faire/refaire l'infra Light Snoop :
 * [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) ou autre logiciel d'interaction console
 * [OpenVPN](https://openvpn.net/community-downloads/)
 * Clé/Stockage USB de 4Go minimum
+* ISO de [PfSense](https://www.pfsense.org/download/)
 * ISO de [Proxmox VE](https://proxmox.com/en/downloads/proxmox-virtual-environment/iso)
-* Un PfSense externe connecté en WAN
-* Deux serveurs de 16 coeurs CPU et 22Go de RAM minimum
+* Un serveur 2 coeurs et 2Go minimum **avec deux cartes réseaux** (PfSense externe)
+* Deux serveurs de 16 coeurs CPU et 22Go de RAM minimum (Proxmox VE)
 * Borne WiFi (Ici Cisco Aironet AIR-PWR-B)
 * Switch pour redistribuer du PfSense aux serveurs et des serveurs au Wifi
-* Optionnel : ISO de PfSense, Windows Server 2022 et Debian 11
+* Optionnel : ISO de Windows Server 2022 et Debian 11
 
 ### Installation
 
 * [PfSense Externe](/PfSense-WAN/README.md)
+* [Switch](/Switch/README.md)
 * [Proxmox VE 1](/Proxmox-1/README.md)
 * [Proxmox VE 2](/Proxmox-2/README.md)
 * [PfSense Interne 1](/Proxmox-1/PfSense-1/README.md)
@@ -49,7 +51,6 @@ Pour faire/refaire l'infra Light Snoop :
 * [Windows Server 2022 Standard 2](/Proxmox-2/Windows-2/README.md)
 * [Debian 11 1](/Proxmox-1/Debian-1/README.md)
 * [Debian 11 2](/Proxmox-2/Debian-2/README.md)
-* [Switch](/Switch/README.md)
 * [Borne WiFi](/Borne-WiFi/README.md)
 
 ## Roadmap
