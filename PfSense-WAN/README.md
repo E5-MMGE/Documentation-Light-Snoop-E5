@@ -55,6 +55,7 @@ Pour faire/refaire l'infra Light Snoop :
 ![Rufus ISO error](/PfSense-WAN/Img/Pf_Rufus-5.png?raw=true "Rufus ISO error")
 ![Rufus ISO](/PfSense-WAN/Img/Pf_Rufus-6.png?raw=true "Rufus ISO")
 7. Lancez le formatage
+- NEED 2 IMAGES
 ![Rufus Format](/PfSense-WAN/Img/Pf_Rufus-7.png?raw=true "Rufus Format")
 ![Rufus End](/PfSense-WAN/Img/Pf_Rufus-8.png?raw=true "Rufus End")
 
