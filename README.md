@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <h3 align="center">Documentation infra Light Snoop</h3>
+  <h2 align="center">Documentation infra Light Snoop</h2>
 
   <p align="center">
     Fait dans le cadre du projet de l'épreuve E5 du BTS SIO 2022-2024
