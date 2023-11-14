@@ -79,9 +79,9 @@ Pour faire/refaire l'infra Light Snoop :
 2. Ouvrez un navigateur
 3. Allez sur l'adresse https://192.168.20.254/
 4. Acceptez et continuez malgré le certificat invalide
-![PfSense Gui Certif](/Img/Pf/Pf_Gui-1.png?raw=true "PfSense Gui Certif")
+![PfSense Gui Certif](/Proxmox-2/PfSense-2/Img/Pf-2_Gui-1.png?raw=true "PfSense Gui Certif")
 4. Connectez-vous avec les identifiants par défaut (admin/pfsense)
-![PfSense Gui Connect](/Img/Pf/Pf_Gui-2.png?raw=true "PfSense Gui Connect")
+![PfSense Gui Connect](/Proxmox-2/PfSense-2/Img/Pf-2_Gui-2.png?raw=true "PfSense Gui Connect")
 5. Faites "Next"
 ![PfSense Gui Startup2](/Img/Pf/Pf_Gui-3.png?raw=true "PfSense Gui Startup2")
 6. Faites "Next"
@@ -91,15 +91,15 @@ Pour faire/refaire l'infra Light Snoop :
   * "1.1.1.1" pour le DNS principal
   * "8.8.8.8" pour le DNS secondaire
 8. Faites "Next"
-![PfSense Gui Host](/Img/Pf/Pf_Gui-5.png?raw=true "PfSense Gui Host")
+![PfSense Gui Host](/Proxmox-2/PfSense-2/Img/Pf-2_Gui-5.png?raw=true "PfSense Gui Host")
 9. Séléctionnez votre fuseau horaire (ici Europe/Paris)
 10. Faites "Next"
 ![PfSense Gui Date/Time](/Img/Pf/Pf_Gui-6.png?raw=true "PfSense Gui Date/Time")
 11. Faites "Next", aucune modification n'est nécessaire pour le WAN
-![PfSense Gui WAN1](/Img/Pf/Pf_Gui-7.png?raw=true "PfSense Gui WAN1")
-![PfSense Gui WAN2](/Img/Pf/Pf_Gui-8.png?raw=true "PfSense Gui WAN2")
+![PfSense Gui WAN1](/Proxmox-2/PfSense-2/Img/Pf-2_Gui-7.png?raw=true "PfSense Gui WAN1")
+![PfSense Gui WAN2](/Proxmox-2/PfSense-2/Img/Pf-2_Gui-8.png?raw=true "PfSense Gui WAN2")
 12. Faites "Next", aucune modification n'est nécessaire pour le LAN
-![PfSense Gui LAN](/Img/Pf/Pf_Gui-9.png?raw=true "PfSense Gui LAN")
+![PfSense Gui LAN](/Proxmox-2/PfSense-2/Img/Pf-2_Gui-9.png?raw=true "PfSense Gui LAN")
 13. Changez le mot de passe de l'admin (ici "hello")
 14. Faites "Next"
 ![PfSense Gui Passwd](/Img/Pf/Pf_Gui-10.png?raw=true "PfSense Gui Passwd")
