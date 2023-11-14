@@ -101,8 +101,7 @@ cd /var/lib/vz/template/iso
 3.a Pour PfSense, récupérez le lien direct de l'ISO sur le site de [PfSense](https://www.pfsense.org/download/)
 ```sh	
 wget https://atxfiles.netgate.com/mirror/downloads/pfSense-CE-2.7.0-RELEASE-amd64.iso.gz
-tar -xvf pfSense-CE-2.7.0-RELEASE-amd64.iso.gz PfSense_2.7.0_x64.iso
-rm pfSense-CE-2.7.0-RELEASE-amd64.iso.gz
+gzip -vd pfSense-CE-2.7.0-RELEASE-amd64.iso.gz
 ```
 3.b Pour Debian 11, récupérez le lien direct de l'ISO sur le site archive de [Debian](https://cdimage.debian.org/mirror/cdimage/archive/)
 ```sh
