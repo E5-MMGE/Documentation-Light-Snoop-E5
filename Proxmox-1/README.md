@@ -101,22 +101,25 @@ cd /var/lib/vz/template/iso
 ```sh	
 wget https://atxfiles.netgate.com/mirror/downloads/pfSense-CE-2.7.0-RELEASE-amd64.iso.gz
 gzip -vd pfSense-CE-2.7.0-RELEASE-amd64.iso.gz
+mv pfSense-CE-2.7.0-RELEASE-amd64.iso PfSense_2.7.0_x64.iso
 ```
+![Proxmox wget ISOs](/Proxmox-1/Img/Pr-1_ISO-2.png?raw=true "Proxmox wget ISOs")
 3.b Pour Debian 11, récupérez le lien direct de l'ISO sur le site archive de [Debian](https://cdimage.debian.org/mirror/cdimage/archive/)
 ```sh
 wget https://cdimage.debian.org/mirror/cdimage/archive/11.8.0/amd64/iso-cd/debian-11.8.0-amd64-netinst.iso
 mv debian-11.8.0-amd64-netinst.iso Debian_11.8.0_x64.iso
 ```
+![Proxmox wget ISOs](/Proxmox-1/Img/Pr-1_ISO-3.png?raw=true "Proxmox wget ISOs")
 3.c Pour Windows Server 2022, récupérez un lien direct de l'ISO (ici nous passerons par un site personnel)
 ```sh
-wget https://ftp.8e-couche.xyz/Iso/WinServ_2022_x64.iso --user=sio
+wget https://ftp.8e-couche.xyz/Iso/WinServ_2022_x64.iso --user=sio --password=password
 ```
-![Proxmox ISOs](/Proxmox-1/Img/Pr-1_ISO-2.png?raw=true "Proxmox wget ISOs")
+![Proxmox ISOs](/Proxmox-1/Img/Pr-1_ISO-4.png?raw=true "Proxmox wget ISOs")
 4. Vérifiez que les ISOs sont bien présentes
 ```sh
 ls
 ```
-![Proxmox ISOs](/Proxmox-1/Img/Pr-1_ISO-3.png?raw=true "Proxmox ls ISOs")
+![Proxmox ISOs](/Proxmox-1/Img/Pr-1_ISO-5.png?raw=true "Proxmox ls ISOs")
 
 ### Installation Suivante
 

@@ -20,7 +20,6 @@
     * [Système](#Système)
     * [Configuration Interne](#Configuration-Interne)
     * [Configuration GUI](#Configuration-GUI)
-    * [Configuration Interfaces](#Configuration-Interfaces)
     * [Installation Suricata](#Installation-Suricata)
     * [Configuration OSPF](#Configuration-OSPF)
   * [Installation Suivante](#Installation-Suivante)
@@ -33,48 +32,125 @@ Pour faire/refaire l'infra Light Snoop :
 
 ### Prérequis
 
-* ISO de [PfSense](https://www.pfsense.org/download/) dans le Proxmox (Voir [Proxmox-1](/Proxmox-1/README.md#téléchargement-isos))
+* ISO de [PfSense](https://www.pfsense.org/download/) dans le Proxmox 1 (Voir [Proxmox-1](/Proxmox-1/README.md#téléchargement-isos))
 
 ### Installation
 
 #### Création de la VM
 
-1. -
+1. Connectez un ordinateur au port LAN du serveur ou au VPN du PfSense Externe
+2. Ouvrez un navigateur
+3. Allez sur l'adresse https://192.168.100.1:8006/
+4. Acceptez et continuez malgré le certificat invalide
+![Proxmox Gui Certif](/Proxmox-1/Img/Pr_Gui-1.png?raw=true "Proxmox Gui Certif")
+5. Connectez-vous avec les identifiants par défaut (ici root/hello)
+![Proxmox Gui Connect](/Img/Prox/Pr_Gui-2.png?raw=true "Proxmox Gui Connect")
+6. Faites "OK" si vous avez un message d'erreur de license, vous pouvez l'ignorer ou acheter une license mais nous ne le montrerons pas ici
+![Proxmox Gui License](/Img/Prox/Pr_Gui-3.png?raw=true "Proxmox Gui License")
+7. Faites "Create VM"
+![Proxmox Gui Create VM](/Img/Prox/Pr_Gui-4.png?raw=true "Proxmox Gui Create VM")
+8. Mettez la VM ID à 100, cela sera le Template final du PfSense Interne 1 en cas de besoin
+9. Nommez la VM "Template-PfSense-1"
+10. Faite "Next"
+![Proxmox Gui VM ID](/Proxmox-1/PfSense-1/Img/Pf-1_Pr-1.png?raw=true "Proxmox Gui VM ID")
+11. Sélectionnez l'ISO de PfSense
+12. Faites "Next"
+![Proxmox Gui ISO](/Img/Pf/Pr/Pf_Pr-2.png?raw=true "Proxmox Gui ISO")
+13. Faites "Next"
+![Proxmox Gui System](/Img/Pf/Pr/Pf_Pr-3.png?raw=true "Proxmox Gui System")
+14. Mettez 10Go de "Disk size"
+15. Faites "Next"
+![Proxmox Gui Disk](/Img/Pf/Pr/Pf_Pr-4.png?raw=true "Proxmox Gui Disk")
+16. Mettez 2 "Cores"
+17. Faites "Next"
+![Proxmox Gui CPU](/Img/Pf/Pr/Pf_Pr-5.png?raw=true "Proxmox Gui CPU")
+18. Mettez 4096 de "Memory"
+19. Faites "Next"
+![Proxmox Gui RAM](/Img/Pf/Pr/Pf_Pr-6.png?raw=true "Proxmox Gui RAM")
+20. Faites à nouveau "Next", nous configurerons une seconde carte réseau plus tard
+![Proxmox Gui Pf Network](/Img/Pf/Pr/Pf_Pr-7.png?raw=true "Proxmox Gui Network")
+21. Confirmez la création de la VM sans cocher "Start after created"
+![Proxmox Gui Summary](/Proxmox-1/PfSense-1/Img/Pf-1_Pr-8.png?raw=true "Proxmox Gui Summary")
+22. Cliquez sur "LightSnoop-1" dans la colonne de gauche
+![Proxmox Gui Network](/Proxmox-1/PfSense-1/Img/Pf-1_Pr-9.png?raw=true "Proxmox Gui Network")
+23. Cliquez sur "Network"
+![Proxmox Gui Network](/Img/Pf/Pr/Pf_Pr-10.png?raw=true "Proxmox Gui Network")
+24. Cliquez sur "Create"
+25. Cliquer sur "Linux Bridge"
+![Proxmox Gui Linux Bridge](/Img/Pf/Pr/Pf_Pr-11.png?raw=true "Proxmox Gui Linux Bridge")
+26. Nommez la "vmbr100" et mettez le nom de l'interface physique (ici "ens36") dans "Bridge ports"
+27. Faites "Create"
+![Proxmox Gui Bridge](/Img/Pf/Pr/Pf_Pr-12.png?raw=true "Proxmox Gui Bridge")
+28. Cliquez sur "Template-PfSense-1" dans la colonne de gauche
+![Proxmox Gui Network](/Proxmox-1/PfSense-1/Img/Pf-1_Pr-13.png?raw=true "Proxmox Gui Network")
+29. Cliquez sur "Hardware"
+![Proxmox Gui Hardware](/Img/Pf/Pr/Pf_Pr-14.png?raw=true "Proxmox Gui Hardware")
+30. Cliquez sur "Add" puis "Network Device"
+![Proxmox Gui Network Device](/Img/Pf/Pr/Pf_Pr-15.png?raw=true "Proxmox Gui Network Device")
+31. Sélectionnez "vmbr100" dans "Bridge"
+32. Faites "Add"
+![Proxmox Gui Network Device](/Img/Pf/Pr/Pf_Pr-16.png?raw=true "Proxmox Gui Network Device")
+33. Cliquez sur "Console"
+![Proxmox Gui Console](/Img/Pf/Pr/Pf_Pr-17.png?raw=true "Proxmox Gui Console")
+34. Cliquez sur "Start Now"
+![Proxmox Gui Start](/Img/Pf/Pr/Pf_Pr-18.png?raw=true "Proxmox Gui Start")
+34.a En cas d'erreur, redémarrez le serveur et recommencez à partir de l'étape 33
 
 #### Système
 
-1. Démarrez la VM
-2. Faites entrer pour démarrer l'installation
+0. Démarrez la VM
+1. Faites entrer pour démarrer l'installation
 ![PfSense Install Start](/Img/Pf/Pf_Install-1.png?raw=true "PfSense Install Start")
-3. Sélectionnez "Install"
+2. Sélectionnez "Install"
 ![PfSense Install](/Img/Pf/Pf_Install-2.png?raw=true "PfSense Install")
-4. Sélectionnez le clavier "Auto (ZFS)"
+3. Sélectionnez le clavier "Auto (ZFS)"
 ![PfSense Install ZFS](/Img/Pf/Pf_Install-3.png?raw=true "PfSense Install ZFS")
-5. Faites entrer pour valider la configuration
+4. Faites entrer pour valider la configuration
 ![PfSense Install Conf](/Img/Pf/Pf_Install-4.png?raw=true "PfSense Install Conf")
-6. Sélectionnez "Stripe"
+5. Sélectionnez "Stripe"
 ![PfSense Install Stripe](/Img/Pf/Pf_Install-5.png?raw=true "PfSense Install Stripe")
-7. Sélectionnez votre disque (touche espace pour sélectionner), ici "da0"
-![PfSense Install Disk](/Img/Pf/Pf_Install-6.png?raw=true "PfSense Install Disk")
-8. Sélectionnez "Yes"
+6. Sélectionnez votre disque (touche espace pour sélectionner), ici "da0"
+![PfSense Install Disk](/Img/Pf/Pr/Pf_Install-6.png?raw=true "PfSense Install Disk")
+7. Sélectionnez "Yes"
 ![PfSense Install Format](/Img/Pf/Pf_Install-7.png?raw=true "PfSense Install Format")
-9. L'installation commence, sélectionnez "Reboot" une fois terminé
+8. L'installation commence, sélectionnez "Reboot" une fois terminé
 ![PfSense Installing](/Img/Pf/Pf_Install-8.png?raw=true "PfSense Installing")
 ![PfSense Install Reboot](/Img/Pf/Pf_Install-9.png?raw=true "PfSense Install Reboot")
 
 #### Configuration Interne
 
-1. Laissez le serveur démarrer
+0. Laissez le PfSense démarrer
+1. Faites "a" pour détecter automatiquement l'inteface WAN et LAN, en cas d'erreur, sélectionnez les manuellement
 2. Appuyez sur 2 pour configurer l'interface WAN
 ![PfSense Conf IntWAN](/Img/Pf/Pf_Conf-1.png?raw=true "PfSense Conf IntWAN")
 3. Sélectionnez l'interface WAN avec le numéro correspondant (ici 1)
 ![PfSense Conf WAN](/Img/Pf/Pf_Conf-2.png?raw=true "PfSense Conf WAN")
-4. Faites "n" pour configurer l'interface WAN en Statique pour l'IpV4
-5. -
+4. Faites "y" pour configurer l'interface WAN en DHCP pour l'IpV4
+5. Faites de même pour l'IpV6
+![PfSense Conf WAN DHCP](/Img/Pf/Pf_Conf-3.png?raw=true "PfSense Conf WAN DHCP")
+6. Si demandé, refusez l'http pour le webconfigurator
+![PfSense Conf WebConf](/Img/Pf/Pf_Conf-4.png?raw=true "PfSense Conf WebConf")
+7. Faites "Entrer" pour valider la configuration
+8. Appuyez sur 2 pour configurer l'interface LAN
+9. Sélectionnez l'interface LAN avec le numéro correspondant (ici 2)
+![PfSense Conf LAN](/Img/Pf/Pf_Conf-5.png?raw=true "PfSense Conf LAN")
+10. Faites "n" pour configurer l'interface LAN en statique pour l'IpV4
+11. L'adresse LAN est 192.168.10.254
+12. Le masque est 24
+13. Faites "Entrer" pour la Gateway car c'est le serveur PfSense lui-même
+![PfSense Conf LAN Static](/Proxmox-1/PfSense-1/Img/Pf-1_Conf-6.png?raw=true "PfSense Conf LAN Static")
+15. Faites "y" pour configurer l'interface LAN en DHCP pour l'IpV6, la raison étant que nous n'en avons pas besoin dans cette infra
+16. Faites "y" pour configurer le serveur DHCP pour l'IpV4
+![PfSense Conf LAN DHCP4](/Img/Pf/Pf_Conf-7.png?raw=true "PfSense Conf LAN DHCP4")
+17. L'adresse de départ est 192.168.10.1
+18. L'adresse de fin est 192.168.10.5
+19. Faites "Entrer" pour valider la configuration
+![PfSense Conf LAN Range](/Proxmox-1/PfSense-1/Img/Pf-1_Conf-8.png?raw=true "PfSense Conf LAN Range")
 
 #### Configuration GUI
 
 0. Installez la VM [Debian 11 1](/Proxmox-1/Debian-1/README.md) ou [Windows Server 2022 Standard 1](/Proxmox-1/Windows-1/README.md)
+
 1. Connectez vous à la VM [Debian 11 1](/Proxmox-1/Debian-1/README.md) ou [Windows Server 2022 Standard 1](/Proxmox-1/Windows-1/README.md) en console depuis Proxmox
 2. Ouvrez un navigateur
 3. Allez sur l'adresse https://192.168.10.254/
@@ -111,10 +187,6 @@ Pour faire/refaire l'infra Light Snoop :
 ![PfSense Gui Notice](/Img/Pf/Pf_Gui-13.png?raw=true "PfSense Gui Notice")
 18. Faites "Close"
 ![PfSense Gui End](/Img/Pf/Pf_Gui-14.png?raw=true "PfSense Gui End")
-
-#### Configuration Interfaces
-
-1. -
 
 #### Installation Suricata
 

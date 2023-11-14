@@ -89,7 +89,8 @@ Pour faire/refaire l'infra Light Snoop :
 
 #### Configuration Interne
 
-1. Laissez le serveur démarrer
+0. Laissez le serveur démarrer
+1. Faites "a" pour détecter automatiquement l'inteface WAN et LAN, en cas d'erreur, sélectionnez les manuellement
 2. Appuyez sur 2 pour configurer l'interface WAN
 ![PfSense Conf IntWAN](/Img/Pf/Pf_Conf-1.png?raw=true "PfSense Conf IntWAN")
 3. Sélectionnez l'interface WAN avec le numéro correspondant (ici 1)
