@@ -32,7 +32,7 @@ Pour faire/refaire l'infra Light Snoop :
 * [Rufus](https://github.com/pbatard/rufus/releases/latest/), [Balena Etcher](https://github.com/balena-io/etcher/releases/latest/) ou tout autre logiciel du genre
 * Clé/Stockage USB de 4Go minimum
 * ISO de [Proxmox VE](https://proxmox.com/en/downloads/proxmox-virtual-environment/iso)
-* Un serveur de 16 coeurs CPU et 22Go de RAM minimum
+* Un serveur de 16 coeurs CPU virtualisable, 22Go de RAM minimum et 220Go de stockage
 
 ### Installation
 
@@ -57,26 +57,76 @@ Pour faire/refaire l'infra Light Snoop :
 
 #### Système
 
+0. Connect to the server to the Switch
 1. Branchez la clé USB sur le serveur
 2. Démarrez le serveur
 3. Appuyez sur F11 pour accéder au boot menu
 4. Sélectionnez la clé USB
 ![BIOS USB](/Img/Bios_USB.png?raw=true "BIOS USB")
-5. -
+5. Sélectionnez "Install Proxmox VE (Graphical)"
+![Proxmox Install](/Img/Prox/Pr_Install-1.png?raw=true "Proxmox Install")
+6. Sélectionnez "I agree" pour accepter la license d'utilisation
+![Proxmox License](/Img/Prox/Pr_Install-2.png?raw=true "Proxmox License")
+7. Sélectionnez le disque sur lequel vous voulez installer Proxmox VE (ici /dev/sda)
+8. Puis faites "Next"
+![Proxmox Disk](/Img/Prox/Pr_Install-3.png?raw=true "Proxmox Disk")
+9. Sélectionnez votre pays, zone horaire et clavier (ici France, le reste s'est mis automatiquement)
+10. Puis faites "Next"
+![Proxmox Country](/Img/Prox/Pr_Install-4.png?raw=true "Proxmox Country")
+11. Entrez un mot de passe pour le compte root et une adresse mail pour le compte admin@pam
+12. Puis faites "Next"
+![Proxmox Password](/Img/Prox/Pr_Install-5.png?raw=true "Proxmox Password")
+13. Sélectionnez votre carte réseau (ici ens33)
+14. Entrez un nom d'hôte (ici "LightSnoop-2.local")
+15. Entrez la configuration réseau (ici 192.168.200.1/24, Gateway 192.168.200.254, DNS 192.168.200.254)
+16. Puis faites "Next"
+![Proxmox Network](/Proxmox-2/Img/Pr-2_Install-6.png?raw=true "Proxmox Network")
+17. Vérifiez les informations, laissez "Reboot" coché et faites "Install"
+![Proxmox Summary](/Proxmox-2/Img/Pr-2_Install-7.png?raw=true "Proxmox Summary")
+18. Attendez que l'installation se termine et que le Proxmox redémarre
+![Proxmox End](/Proxmox-2/Img/Pr-2_Install-8.png?raw=true "Proxmox End")
+19. Si ce n'est pas déjà fait, faites la configuration des interfaces du [PfSense Externe](/PfSense-WAN/README.md#configuration-interfaces)
 
 #### Téléchargement ISOs
 
-1. -
+0. Connectez-vous au Proxmox en physique, SSH ou sur la console de l'interface web (https://192.168.100.1:8006/), (ici en physique)
+1. Si demandé, rentrez le mot de passe root (ici "root", "hello")
+![Proxmox Login](/Proxmox-2/Img/Pr-2_ISO-1.png?raw=true "Proxmox Login")
+2. Naviguez jusqu'à "Var" > "Lib" > "VZ" > "Template" > "ISO"
+```sh
+cd /var/lib/vz/template/iso
+```
+![Proxmox Location](/Proxmox-2/Img/Pr-2_ISO-2.png?raw=true "Proxmox Location")
+3. Téléchargez les ISOs avec wget
+3.a Pour PfSense, récupérez le lien direct de l'ISO sur le site de [PfSense](https://www.pfsense.org/download/)
+```sh	
+wget https://atxfiles.netgate.com/mirror/downloads/pfSense-CE-2.7.0-RELEASE-amd64.iso.gz
+tar -xvf pfSense-CE-2.7.0-RELEASE-amd64.iso.gz PfSense_2.7.0_x64.iso && rm pfSense-CE-2.7.0-RELEASE-amd64.iso.gz
+```
+3.b Pour Debian 11, récupérez le lien direct de l'ISO sur le site archive de [Debian](https://cdimage.debian.org/mirror/cdimage/archive/)
+```sh
+wget https://cdimage.debian.org/mirror/cdimage/archive/11.8.0/amd64/iso-cd/debian-11.8.0-amd64-netinst.iso && mv debian-11.8.0-amd64-netinst.iso Debian_11.8.0_x64.iso
+```
+3.c Pour Windows Server 2022, récupérez un lien direct de l'ISO (ici nous passerons par un site personnel)
+```sh
+wget https://ftp.8e-couche.xyz/Iso/WinServ_2022_x64.iso --user=sio
+```
+![Proxmox ISOs](/Proxmox-2/Img/Pr-2_ISO-3.png?raw=true "Proxmox wget ISOs")
+4. Vérifiez que les ISOs sont bien présentes
+```sh
+ls
+```
+![Proxmox ISOs](/Proxmox-2/Img/Pr-2_ISO-4.png?raw=true "Proxmox ls ISOs")
 
 ### Installation Suivante
 
-* [PfSense 2](/Proxmox-1/PfSense-1/README.md)
-* [Windows Server 2022 Standard 2](/Proxmox-1/Windows-1/README.md)
-* [Debian 11 2](/Proxmox-1/Debian-1/README.md)
+* [PfSense 2](/Proxmox-2/PfSense-2/README.md)
+* [Windows Server 2022 Standard 2](/Proxmox-2/Windows-2/README.md)
+* [Debian 11 2](/Proxmox-2/Debian-2/README.md)
 
 ## Roadmap
 
-* Fin
+* Ajouter l'alternative des ISOs sur une clé USB
 
 ## License
 

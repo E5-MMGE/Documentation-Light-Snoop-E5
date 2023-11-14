@@ -21,6 +21,9 @@
     * [Configuration Interne](#Configuration-Interne)
     * [Configuration GUI](#Configuration-GUI)
     * [Configuration Interfaces](#Configuration-Interfaces)
+      * [Configuration VLANs](#Configuration-VLANs)
+      * [Configuration DHCP](#Configuration-DHCP)
+      * [Configuration Firewall](#Configuration-Firewall)
     * [Configuration VPN](#Configuration-VPN)
     * [Configuration OSPF](#Configuration-OSPF)
   * [Installation Suivante](#Installation-Suivante)
@@ -121,7 +124,7 @@ Pour faire/refaire l'infra Light Snoop :
 4. Acceptez et continuez malgré le certificat invalide
 ![PfSense Gui Certif](/PfSense-WAN/Img/Pf-WAN_Gui-1.png?raw=true "PfSense Gui Certif")
 4. Connectez-vous avec les identifiants par défaut (admin/pfsense)
-![PfSense Gui Connect](/PfSense-WAN/Img/Pf-WAN-_Gui-2.png?raw=true "PfSense Gui Connect")
+![PfSense Gui Connect](/PfSense-WAN/Img/Pf-WAN_Gui-2.png?raw=true "PfSense Gui Connect")
 5. Faites "Next"
 ![PfSense Gui Startup2](/Img/Pf/Pf_Gui-3.png?raw=true "PfSense Gui Startup2")
 6. Faites "Next"
@@ -154,7 +157,115 @@ Pour faire/refaire l'infra Light Snoop :
 
 #### Configuration Interfaces
 
-1. -
+##### Configuration VLANs
+
+1. Connectez un ordinateur au port LAN du serveur
+2. Ouvrez un navigateur
+3. Allez sur l'adresse https://192.168.1.1/
+4. Connectez-vous avec les identifiants défini (ici admin/admin)
+![PfSense Gui Connect](/PfSense-WAN/Img/Pf-WAN_Gui-2.png?raw=true "PfSense Gui Connect")
+5. Allez dans "Interfaces" > "Assignments"
+![PfSense Gui Interfaces](/PfSense-WAN/Img/Pf-WAN_Int-1.png?raw=true "PfSense Gui Interfaces")
+6. Allez dans "VLANs"
+![PfSense Gui VLANs](/PfSense-WAN/Img/Pf-WAN_Int-2.png?raw=true "PfSense Gui VLANs")
+7. Cliquez sur "Add"
+![PfSense Gui VLANs Add](/PfSense-WAN/Img/Pf-WAN_Int-3.png?raw=true "PfSense Gui VLANs Add")
+8. Sélectionnez l'interface LAN (ici em0)
+9. Entrez le VLAN (ici 100)
+10. Entrez une description (ici "Serv1 Light-Snoop")
+11. Faites "Save"
+![PfSense Gui VLANs Add 100](/PfSense-WAN/Img/Pf-WAN_Int-4.png?raw=true "PfSense Gui VLANs 100")
+12. Cliquez sur "Add"
+![PfSense Gui VLANs Add 2](/PfSense-WAN/Img/Pf-WAN_Int-5.png?raw=true "PfSense Gui VLANs Add 2")
+13. Sélectionnez l'interface LAN (ici em0)
+14. Entrez le VLAN (ici 200)
+15. Entrez une description (ici "Serv2 Light-Snoop")
+16. Faites "Save"
+![PfSense Gui VLANs Add 200](/PfSense-WAN/Img/Pf-WAN_Int-6.png?raw=true "PfSense Gui VLANs 200")
+17. Allez dans "Interfaces Assignments"
+![PfSense Gui Interfaces Assignments](/PfSense-WAN/Img/Pf-WAN_Int-7.png?raw=true "PfSense Gui Interfaces Assignments")
+18. Faites "Add"
+![PfSense Gui Int Add 100](/PfSense-WAN/Img/Pf-WAN_Int-8.png?raw=true "PfSense Gui Int Add 100")
+19. Faites à nouveau "Add"
+![PfSense Gui Int Add 200](/PfSense-WAN/Img/Pf-WAN_Int-9.png?raw=true "PfSense Gui Int Add 200")
+20. Cliquez sur l'interface OPT1 (VLAN 100)
+![PfSense Gui Int OPT1](/PfSense-WAN/Img/Pf-WAN_Int-10.png?raw=true "PfSense Gui Int OPT1")
+21. Activez l'interface
+22. Passez l'IPv4 en statique
+23. Entrez l'adresse IP (ici 192.168.100.254)
+24. Précisez le masque (ici 24)
+25. Faites "Save"
+![PfSense Gui Int OPT1 Conf](/PfSense-WAN/Img/Pf-WAN_Int-11.png?raw=true "PfSense Gui Int OPT1 On")
+26. Retournez dans "Interfaces" > "Assignments"
+![PfSense Gui Interfaces Assignments 2](/PfSense-WAN/Img/Pf-WAN_Int-12.png?raw=true "PfSense Gui Interfaces Assignments 2")
+20. Cliquez sur l'interface OPT2 (VLAN 200)
+![PfSense Gui Int OPT2](/PfSense-WAN/Img/Pf-WAN_Int-13.png?raw=true "PfSense Gui Int OPT2")
+21. Activez l'interface
+22. Passez l'IPv4 en statique
+23. Entrez l'adresse IP (ici 192.168.200.254)
+24. Précisez le masque (ici 24)
+25. Faites "Save"
+![PfSense Gui Int OPT2 Conf](/PfSense-WAN/Img/Pf-WAN_Int-14.png?raw=true "PfSense Gui Int OPT2 On")
+
+##### Configuration DHCP
+
+1. Allez dans "Services" > "DHCP Server"
+![PfSense Gui DHCP](/PfSense-WAN/Img/Pf-WAN_DHCP-1.png?raw=true "PfSense Gui DHCP")
+2. Allez dans "OPT1"
+![PfSense Gui DHCP OPT1](/PfSense-WAN/Img/Pf-WAN_DHCP-2.png?raw=true "PfSense Gui DHCP OPT1")
+3. Activez le serveur DHCP
+4. Entrez le range d'adresse (ici 192.168.100.1 - 192.168.100.5)
+5. Faites "Save"
+![PfSense Gui DHCP OPT1 Conf](/PfSense-WAN/Img/Pf-WAN_DHCP-3.png?raw=true "PfSense Gui DHCP OPT1 Conf")
+6. Allez dans "OPT2"
+![PfSense Gui DHCP OPT2](/PfSense-WAN/Img/Pf-WAN_DHCP-4.png?raw=true "PfSense Gui DHCP OPT2")
+7. Activez le serveur DHCP
+8. Entrez le range d'adresse (ici 192.168.200.1 - 192.168.200.5)
+9. Faites "Save"
+![PfSense Gui DHCP OPT2 Conf](/PfSense-WAN/Img/Pf-WAN_DHCP-5.png?raw=true "PfSense Gui DHCP OPT2 Conf")
+
+##### Configuration Firewall
+
+1. Allez dans "Firewall" > "Rules"
+![PfSense Gui Rules](/PfSense-WAN/Img/Pf-WAN_Firewall-1.png?raw=true "PfSense Gui Rules")
+2. Allez dans "OPT1"
+![PfSense Gui Rules OPT1](/PfSense-WAN/Img/Pf-WAN_Firewall-2.png?raw=true "PfSense Gui Rules OPT1")
+3. Faites "Add"
+![PfSense Gui Rules OPT1 Add IPv4](/PfSense-WAN/Img/Pf-WAN_Firewall-3.png?raw=true "PfSense Gui Rules OPT1 Add IPv4")
+4. Changer le "Protocol" en "Any"
+5. Changer la "Source" en "OPT1 net"
+6. Mettez "Default allow LAN to any rule" en description
+7. Faites "Save"
+![PfSense Gui Rules OPT1 Add Conf IPv4](/PfSense-WAN/Img/Pf-WAN_Firewall-4.png?raw=true "PfSense Gui Rules OPT1 Add Conf IPv4")
+8. Faites "Add"
+![PfSense Gui Rules OPT1 Add IPv6](/PfSense-WAN/Img/Pf-WAN_Firewall-5.png?raw=true "PfSense Gui Rules OPT1 Add IPv6")
+9. Changer l' "Address Family" en "IPv6"
+10. Changer le "Protocol" en "Any"
+11. Changer la "Source" en "OPT1 net"
+12. Mettez "Default allow LAN to any rule" en description
+13. Faites "Save"
+![PfSense Gui Rules OPT1 Add Conf IPv6](/PfSense-WAN/Img/Pf-WAN_Firewall-6.png?raw=true "PfSense Gui Rules OPT1 Add Conf IPv6")
+14. Allez dans "OPT2"
+![PfSense Gui Rules OPT2](/PfSense-WAN/Img/Pf-WAN_Firewall-7.png?raw=true "PfSense Gui Rules OPT2")
+15. Faites "Add"
+![PfSense Gui Rules OPT2 Add IPv4](/PfSense-WAN/Img/Pf-WAN_Firewall-8.png?raw=true "PfSense Gui Rules OPT2 Add IPv4")
+16. Changer le "Protocol" en "Any"
+17. Changer la "Source" en "OPT2 net"
+18. Mettez "Default allow LAN to any rule" en description
+19. Faites "Save"
+![PfSense Gui Rules OPT2 Add Conf IPv4](/PfSense-WAN/Img/Pf-WAN_Firewall-9.png?raw=true "PfSense Gui Rules OPT2 Add Conf IPv4")
+20. Faites "Add"
+![PfSense Gui Rules OPT2 Add IPv6](/PfSense-WAN/Img/Pf-WAN_Firewall-10.png?raw=true "PfSense Gui Rules OPT2 Add IPv6")
+21. Changer l' "Address Family" en "IPv6"
+22. Changer le "Protocol" en "Any"
+23. Changer la "Source" en "OPT2 net"
+24. Mettez "Default allow LAN to any rule" en description
+25. Faites "Save"
+![PfSense Gui Rules OPT2 Add Conf IPv6](/PfSense-WAN/Img/Pf-WAN_Firewall-11.png?raw=true "PfSense Gui Rules OPT2 Add Conf IPv6")
+26. Redémarrez le serveur PfSense pour que tout les changements soient pris en compte : "Diagnostics" > "Reboot"
+![PfSense Gui Reboot](/PfSense-WAN/Img/Pf-WAN_Firewall-12.png?raw=true "PfSense Gui Reboot")
+27. Faites "Submit" pour confirmer le redémarrage
+![PfSense Gui Reboot YES](/PfSense-WAN/Img/Pf-WAN_Reboot.png?raw=true "PfSense Gui Reboot YES")
 
 #### Configuration VPN
 
@@ -167,8 +278,6 @@ Pour faire/refaire l'infra Light Snoop :
 ### Installation Suivante
 
 * [Switch](/Switch/README.md)
-* [Proxmox VE 1](/Proxmox-1/README.md)
-* [Proxmox VE 2](/Proxmox-2/README.md)
 
 ## Roadmap
 

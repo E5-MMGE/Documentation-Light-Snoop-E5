@@ -37,7 +37,6 @@ Pour faire/refaire l'infra Light Snoop :
 * Deux serveurs de 16 coeurs CPU virtualisable, 22Go de RAM minimum et 220Go de stockage (Proxmox VE)
 * Borne WiFi (Ici Cisco Aironet AIR-PWR-B)
 * Switch pour redistribuer du PfSense aux serveurs et des serveurs au Wifi
-* Optionnel : ISO de Windows Server 2022 et Debian 11
 
 ### Installation
 
