@@ -131,15 +131,15 @@ Pour faire/refaire l'infra Light Snoop :
   * "1.1.1.1" pour le DNS principal
   * "8.8.8.8" pour le DNS secondaire
 8. Faites "Next"
-![PfSense Gui Host](/PfSense-WAN/Img/Pf-WAN-_Gui-5.png?raw=true "PfSense Gui Host")
+![PfSense Gui Host](/PfSense-WAN/Img/Pf-WAN_Gui-5.png?raw=true "PfSense Gui Host")
 9. Séléctionnez votre fuseau horaire (ici Europe/Paris)
 10. Faites "Next"
 ![PfSense Gui Date/Time](/Img/Pf/Pf_Gui-6.png?raw=true "PfSense Gui Date/Time")
 11. Faites "Next", aucune modification n'est nécessaire pour le WAN
-![PfSense Gui WAN1](/PfSense-WAN/Img/Pf-WAN-_Gui-7.png?raw=true "PfSense Gui WAN1")
-![PfSense Gui WAN2](/PfSense-WAN/Img/Pf-WAN-_Gui-8.png?raw=true "PfSense Gui WAN2")
+![PfSense Gui WAN1](/PfSense-WAN/Img/Pf-WAN_Gui-7.png?raw=true "PfSense Gui WAN1")
+![PfSense Gui WAN2](/PfSense-WAN/Img/Pf-WAN_Gui-8.png?raw=true "PfSense Gui WAN2")
 12. Faites "Next", aucune modification n'est nécessaire pour le LAN
-![PfSense Gui LAN](/PfSense-WAN/Img/Pf-WAN-_Gui-9.png?raw=true "PfSense Gui LAN")
+![PfSense Gui LAN](/PfSense-WAN/Img/Pf-WAN_Gui-9.png?raw=true "PfSense Gui LAN")
 13. Changez le mot de passe de l'admin (ici "admin")
 14. Faites "Next"
 ![PfSense Gui Passwd](/Img/Pf/Pf_Gui-10.png?raw=true "PfSense Gui Passwd")
