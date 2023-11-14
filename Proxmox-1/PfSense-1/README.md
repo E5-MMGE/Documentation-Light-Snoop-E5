@@ -33,7 +33,7 @@ Pour faire/refaire l'infra Light Snoop :
 
 ### Prérequis
 
-* ISO de [PfSense](https://www.pfsense.org/download/) dans le Proxmox (Voir [Proxmox-1/README.md](/Proxmox-1/README.md#téléchargement-isos))
+* ISO de [PfSense](https://www.pfsense.org/download/) dans le Proxmox (Voir [Proxmox-1](/Proxmox-1/README.md#téléchargement-isos))
 
 ### Installation
 
