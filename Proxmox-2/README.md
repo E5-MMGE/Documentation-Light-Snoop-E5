@@ -48,7 +48,7 @@ Pour faire/refaire l'infra Light Snoop :
 6. Sélectionnez la clé USB
 ![Rufus USB](/Img/Rufus-4.png?raw=true "Rufus USB")
 5. Sélectionnez l'ISO de Proxmox VE, continuez si vous avez une erreur "ISOHybrid"
-![Rufus ISO error](/Img/Prox/Pr_Rufus-5.png?raw=true "Rufus ISO error")
+![Rufus ISO error](/Img/Rufus-5.png?raw=true "Rufus ISO error")
 ![Rufus ISO](/Img/Prox/Pr_Rufus-6.png?raw=true "Rufus ISO")
 7. Lancez le formatage
 - NEED 2 IMAGES
