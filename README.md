@@ -34,7 +34,7 @@ Pour faire/refaire l'infra Light Snoop :
 * ISO de [PfSense](https://www.pfsense.org/download/)
 * ISO de [Proxmox VE](https://proxmox.com/en/downloads/proxmox-virtual-environment/iso)
 * Un serveur 2 coeurs et 2Go minimum **avec deux cartes réseaux** (PfSense externe)
-* Deux serveurs de 16 coeurs CPU et 22Go de RAM minimum (Proxmox VE)
+* Deux serveurs de 16 coeurs CPU virtualisable, 22Go de RAM minimum et 220Go de stockage (Proxmox VE)
 * Borne WiFi (Ici Cisco Aironet AIR-PWR-B)
 * Switch pour redistribuer du PfSense aux serveurs et des serveurs au Wifi
 * Optionnel : ISO de Windows Server 2022 et Debian 11
