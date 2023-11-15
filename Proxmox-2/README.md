@@ -18,7 +18,7 @@
   * [Installation](#Installation)
     * [Formatage de la clé USB](#Formatage-de-la-clé-USB)
     * [Système](#Système)
-    * [Téléchargement ISOs](#Configuration-Interne)
+    * [Téléchargement ISOs](#Téléchargement-ISOs)
   * [Installation Suivante](#Installation-Suivante)
 * [Roadmap](#Roadmap)
 * [License](#License)
