@@ -75,7 +75,7 @@ Pour faire/refaire l'infra Light Snoop :
 </br>![PfSense Install](/Img/Pf/Pf_Install-2.png?raw=true "PfSense Install")
 7. Sélectionnez le clavier "Auto (ZFS)"
 </br>![PfSense Install ZFS](/Img/Pf/Pf_Install-3.png?raw=true "PfSense Install ZFS")
-8. Faites entrer pour valider la configuration
+8. Faites entrer pour valider la configuration une fois le pfSense renommé (ici "Pf-WAN")
 </br>![PfSense Install Conf](/Img/Pf/Pf_Install-4.png?raw=true "PfSense Install Conf")
 9. Sélectionnez "Stripe"
 </br>![PfSense Install Stripe](/Img/Pf/Pf_Install-5.png?raw=true "PfSense Install Stripe")
@@ -105,14 +105,14 @@ Pour faire/refaire l'infra Light Snoop :
 9. Sélectionnez l'interface LAN avec le numéro correspondant (ici 2)
 </br>![PfSense Conf LAN](/Img/Pf/Pf_Conf-5.png?raw=true "PfSense Conf LAN")
 10. Faites "n" pour configurer l'interface LAN en statique pour l'IpV4
-11. L'adresse LAN est 192.168.1.1
+11. L'adresse LAN est 192.168.1.254
 12. Le masque est 24
 13. Faites "Entrer" pour la Gateway car c'est le serveur PfSense lui-même
 </br>![PfSense Conf LAN Static](/PfSense-WAN/Img/Pf-WAN_Conf-6.png?raw=true "PfSense Conf LAN Static")
 15. Faites "y" pour configurer l'interface LAN en DHCP pour l'IpV6, la raison étant que nous n'en avons pas besoin dans cette infra
 16. Faites "y" pour configurer le serveur DHCP pour l'IpV4
 </br>![PfSense Conf LAN DHCP4](/Img/Pf/Pf_Conf-7.png?raw=true "PfSense Conf LAN DHCP4")
-17. L'adresse de départ est 192.168.1.2
+17. L'adresse de départ est 192.168.1.1
 18. L'adresse de fin est 192.168.1.5
 19. Faites "Entrer" pour valider la configuration
 </br>![PfSense Conf LAN Range](/PfSense-WAN/Img/Pf-WAN_Conf-8.png?raw=true "PfSense Conf LAN Range")
