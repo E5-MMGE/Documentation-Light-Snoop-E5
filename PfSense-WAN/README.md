@@ -192,6 +192,7 @@ Pour faire/refaire l'infra Light Snoop :
 20. Cliquez sur l'interface OPT1 (VLAN 100)
 </br>![PfSense Gui Int OPT1](/PfSense-WAN/Img/Pf-WAN_Int-10.png?raw=true "PfSense Gui Int OPT1")
 21. Activez l'interface
+22. Renommez l'interface (ici "Vlan 100")
 22. Passez l'IPv4 en statique
 23. Entrez l'adresse IP (ici 192.168.100.254)
 24. Précisez le masque (ici 24)
@@ -202,6 +203,7 @@ Pour faire/refaire l'infra Light Snoop :
 20. Cliquez sur l'interface OPT2 (VLAN 200)
 </br>![PfSense Gui Int OPT2](/PfSense-WAN/Img/Pf-WAN_Int-13.png?raw=true "PfSense Gui Int OPT2")
 21. Activez l'interface
+22. Renommez l'interface (ici "Vlan 200")
 22. Passez l'IPv4 en statique
 23. Entrez l'adresse IP (ici 192.168.200.254)
 24. Précisez le masque (ici 24)
